@@ -1,0 +1,13 @@
+<html>
+   <body>
+      <form action = "/predict" method = "POST" enctype="multipart/form-data" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+      {% for files in onlyfiles %}
+      	<img src="{{ url_for('static', filename=files) }}"></img>
+      {% endfor %}
+   </body>
+   <form></form>
+</html>
